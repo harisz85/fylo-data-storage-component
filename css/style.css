@@ -1,0 +1,236 @@
+:root {
+  --gradient1: hsl(6, 100%, 80%);
+  --gradient2: hsl(335, 100%, 65%);
+  --pale-blue:hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  background: var(--very-dark-blue);
+  font-size: .875em;
+  font-family: Raleway; }
+
+h3 {
+  color: var(--grayish-blue); }
+
+.image {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50vh; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+    .image {
+      display: none; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 760px) and (orientation: landscape) {
+    .image {
+      z-index: -1; } }
+
+.image-mobile {
+  display: none; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+    .image-mobile {
+      display: inline;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      height: 100vh; } }
+
+.box {
+  width: 80%;
+  position: absolute;
+  top: 40%;
+  left: 20%; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .box {
+      top: 10%;
+      left: 15%; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .box {
+      left: 4.5%;
+      top: 35%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+    .box {
+      position: initial; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 760px) and (orientation: landscape) {
+    .box {
+      position: static; } }
+  .box::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .box__first {
+    margin-right: 2rem;
+    background-color: var(--dark-blue);
+    padding: 3rem 8rem 3rem 8rem;
+    border-radius: .5rem;
+    border-top-right-radius: 8rem;
+    float: left; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+      .box__first {
+        float: none;
+        padding-right: 11rem;
+        margin-left: .5rem; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 760px) and (orientation: landscape) {
+      .box__first {
+        margin-right: 0;
+        padding-bottom: 1rem; } }
+  .box__container {
+    position: relative;
+    right: 5rem; }
+  .box__second {
+    position: absolute;
+    left: 30rem;
+    bottom: 0;
+    padding: 3rem 15rem 2rem 2rem;
+    background-color: var(--dark-blue);
+    border-radius: .5rem;
+    float: right; }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      .box__second {
+        position: relative;
+        left: -4rem;
+        top: 4rem; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      .box__second {
+        padding-top: 2rem; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+      .box__second {
+        float: none;
+        left: 0;
+        bottom: initial;
+        top: 18rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-left: .5rem; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 760px) and (orientation: landscape) {
+      .box__second {
+        left: 14rem;
+        padding-top: 2rem;
+        padding-right: 14rem; } }
+  .box__fylo {
+    display: inline-block; }
+  .box__icons {
+    display: flex; }
+  .box__span {
+    color: var(--pale-blue); }
+
+.folder {
+  background-color: var(--very-dark-blue);
+  padding: .9rem .8rem .55rem;
+  border-radius: 20%;
+  margin-top: 1rem;
+  margin-right: 1rem; }
+
+.slider__container {
+  width: 170%;
+  background-color: var(--very-dark-blue);
+  padding: .3rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding-right: 10rem; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .slider__container {
+      width: 200%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+    .slider__container {
+      width: 90%; } }
+
+.slider {
+  position: relative;
+  width: 110%;
+  background: linear-gradient(to right, var(--gradient1), var(--gradient2));
+  padding: .5rem;
+  border-radius: 10px; }
+  .slider__ball {
+    background-color: var(--pale-blue);
+    padding: .5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 10px; }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+    .slider {
+      width: 250%; } }
+
+.data {
+  margin-top: .5rem; }
+  .data__left {
+    float: left;
+    color: var(--pale-blue); }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+      .data__left {
+        float: none; } }
+  .data__right {
+    float: right;
+    position: relative;
+    left: 12rem;
+    color: var(--pale-blue); }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+      .data__right {
+        float: none;
+        bottom: 1.1rem; } }
+  .data::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.cloud {
+  float: right;
+  position: relative;
+  right: 35rem;
+  z-index: 10;
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px; }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .cloud {
+      right: 7.5rem;
+      top: 19rem; } }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .cloud {
+      right: 0;
+      top: -1rem;
+      left: 3rem; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+    .cloud {
+      float: none;
+      width: 80%;
+      text-align: center;
+      right: 0;
+      top: 28rem;
+      left: 3.7rem;
+      font-size: large; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 760px) and (orientation: landscape) {
+    .cloud {
+      right: 0;
+      left: 6.5rem;
+      top: 8rem; } }
+  .cloud span {
+    color: var(--grayish-blue);
+    font-size: 0.8rem;
+    padding-left: .3rem; }
+  .cloud__angle {
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%);
+    background: #fff;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 6.7rem; }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+      .cloud__angle {
+        display: none; } }
