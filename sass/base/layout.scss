@@ -8,10 +8,6 @@
             @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
                 display: none;
         }
-
-            @media only screen and (min-device-width : 320px) and (max-device-width : 760px) and (orientation : landscape)  {
-                z-index: -1;
-            }
 }
 
 
@@ -33,57 +29,30 @@
 .box {
     width: 80%;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 20%;
 
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-
-            top: 10%;
-            left: 15%;
-        }
-
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-            
-            left: 4.5%;
-            top: 35%;
-        }
 
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)  {
             position:initial;
+            width: 90%;
+            margin: 4rem auto;
         }
 
-
-        @media only screen and (min-device-width : 320px) and (max-device-width : 760px) and (orientation : landscape)  {
-            position: static;
-        }
-
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
     
     &__first {
 
-        
+        width: 30%;
         margin-right: 2rem;
         background-color: var(--dark-blue);
         padding: 3rem 8rem 3rem 8rem;
         border-radius: .5rem;
         border-top-right-radius:8rem ;
-        float:left;
 
             @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)  {
-                float: none;
-                padding-right: 11rem;
-                margin-left: .5rem;
+                padding-right: 13rem;
             }
-
-            @media only screen and (min-device-width : 320px) and (max-device-width : 760px) and (orientation : landscape)  {
-                margin-right: 0;
-                padding-bottom: 1rem;
-        }
         
     }
 
@@ -95,40 +64,23 @@
     &__second {     
         position: absolute;
         left: 30rem;
-        bottom: 0;
+        bottom: 0rem;
         padding: 3rem 15rem 2rem 2rem;
         background-color: var(--dark-blue);
         border-radius: .5rem;
-        float: right;
 
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-            position: relative;
-            left: -4rem;
-            top: 4rem;
-        }
-
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-            padding-top: 2rem;
-        }
 
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)  {
+            position: initial;
+            padding:0;
+            padding-left: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            margin-top: 1rem;
 
-            float: none;
-            left: 0;
-            bottom: initial;
-            top: 18rem;
-            padding-right: 1rem;
-            padding-left: 1rem;
-            margin-left: .5rem;
+            
         }    
-
-
-                @media only screen and (min-device-width : 320px) and (max-device-width : 760px) and (orientation : landscape)  {
-                left: 14rem;
-                padding-top: 2rem;
-                padding-right: 14rem;
-        }
         
     }
 
@@ -163,20 +115,15 @@
     margin-top: 1rem;
     padding-right: 10rem;
 
-
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)  {
-            width: 200%;
-        }
-
         
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
             width: 90%;
+            padding-right: 5rem;
         }
 }
 
 .slider {
     position: relative;
-    width: 110%;
     background: linear-gradient(to right,var(--gradient1), var(--gradient2));
     padding: .5rem;
     border-radius: 10px;
@@ -191,9 +138,9 @@
         }
 
 
-                @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
-                    width: 250%;
-                }
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+            
+        }
 }
 
 
@@ -232,49 +179,33 @@
 
 .cloud {
 
-        float: right;
+        width: 10%;
         position: relative;
-        right: 35rem;
+        left: 54%;
+        top: 5rem;
         z-index: 10;
         background-color: #fff;
         padding: 1rem;
         font-size: 1.2rem;
         border-radius: 10px;
 
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-
-        right: 7.5rem;
-        top: 19rem;
-    }
-
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-
-        right: 0;
-        top: -1rem;
-        left: 3rem;
-    }
 
 
         @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
 
-        float: none;
-        width: 80%;
+        width: 55%;
         text-align: center;
         right: 0;
-        top: 28rem;
-        left: 3.7rem;
-        font-size: large;
+        top: 26rem;
+        left: 4.7rem;
+        
+        h2 {
+            font-size: 2rem;
+        }
 
     }
-    
-            @media only screen and (min-device-width : 320px) and (max-device-width : 760px) and (orientation : landscape)  {
 
-                right: 0;
-                left: 6.5rem;
-                top: 8rem;
-            }
-
-        span {
+    span {
             color: var(--grayish-blue);
             font-size: 0.8rem;
             padding-left: .3rem;
@@ -285,8 +216,8 @@
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%);
                 background: #fff;
                 position: absolute;
-                bottom: -1.5rem;
-                left: 6.7rem;
+                bottom: -1rem;
+                left: 7.6rem;
 
 
             @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
